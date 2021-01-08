@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Blogs</title>
+
+{% endblock %}
+
+{% block body %}
+<a href="/blogs/new_post" class="btn btn-success my-4">+New Post</a>
+<h1 class="my-5">Blogs:</h1>
+{% for blog in all_blogs %}
+<div class="card">
+    <div class="card-body">
+        <h3>Title: {{ blog.title }}</h3>
+        <h3>Author: {{ blog.Author }}</h3>
+        <h4>Blog: {{blog.Blog}}</h4>
+        <a  href="/blogs/blogedit/{{blog.id}}" class="btn btn-danger my-2">Edit</a>
+        <a  href="/blogs/blogdelete/{{blog.id}}" class="btn btn-danger mx-1 my-2">Delete</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

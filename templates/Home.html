@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>HomePage</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="my-3 ml-2">To-Do List</h1>
+<form action="/" method="post">
+    <div class="form-group ml-3 mr-3">
+    <h3 class="my-2 text-primary">What To Do?</h3></label>
+    <input class="form-control my-2" type="text" name="title" id="Text" placeholder="Default input">
+    <button type="submit" class="btn btn-primary my-2 px-3">Add</button>
+    </div>
+</form>
+<div class="container">
+    {% for post in posts %}
+    <div class="card">
+        <div class="card-body">
+            <h2  style="white-space: pre-wrap">{{ post.work }}</h2>
+            <a  href="/Home/Edit/{{post.id}}" class="btn btn-danger my-2">Edit</a>
+            <a  href="/Home/delete/{{post.id}}" class="btn btn-danger mx-1 my-2">Delete</a>
+        </div>
+      </div>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}

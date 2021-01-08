@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>HomePage</title>
+{% endblock %}
+
+{% block body %}
+
+<form action="/blogs" method="post">
+    <div class="form-group my-4">
+        <h3>Title:</h3>
+        <input type="text" class="form-control" id="text1" name="title" placeholder="Example input placeholder">
+    </div>
+    <div class="form-group my-4">
+        <h3>Author:</h3>
+        <input type="text" class="form-control" id="text2" name="author" placeholder="Another input placeholder">
+    </div>
+    <div class="form-group my-4">
+        <h3>Blog:</h3>
+        <textarea class="form-control" id="
+        textarea" name="blog" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success px-5 font-weight-bolds">Post</button>
+</form>
+
+{% endblock %}

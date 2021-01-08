@@ -1,0 +1,12 @@
+
+.Error404::before{
+    background: url("../images/error404.png") no-repeat center center/cover;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    opacity: 0.9;
+}

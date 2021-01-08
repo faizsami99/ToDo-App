@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Editing</title>
+
+{% endblock %}
+
+{% block body %}
+<h1>Editing:</h1>
+<form action="/blogs/blogedit/{{post.id}}" method="post">
+    <div class="form-group my-4">
+        <h3>Title:</h3>
+        <input type="text" class="form-control" id="text1" name="title" value="{{post.title}}">
+    </div>
+    <div class="form-group my-4">
+        <h3>Author:</h3>
+        <input type="text" class="form-control" id="text2" name="author" value="{{ post.Author }}">
+    </div>
+    <div class="form-group my-4">
+        <h3>Blog:</h3>
+        <textarea class="form-control" id="
+        textarea" name="blog" rows="3">{{post.Blog}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-success px-5 font-weight-bolds">Save</button>
+</form>
+
+{% endblock %}
